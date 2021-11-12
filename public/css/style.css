@@ -1,0 +1,149 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    background:url('../img/bg.svg') no-repeat;
+    background-size: 100vw auto;
+}
+
+body {
+    margin: 0;
+    
+}
+
+.logo_div {
+    width: 50%;
+    text-align: center;
+}
+
+.login_div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (orientation: portrait) {
+    body {
+        background-size: auto 100vh;
+    }
+}
+
+.register-container {
+    height: 100vh;
+    width: 100vw;
+    background: transparent linear-gradient(145deg, #63FC21 0%, #02B3FF 100%) 0% 0% no-repeat padding-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+}
+
+.register-box-container {
+    padding: 2vh 10vh 10vh 10vh;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: inset -5px -5px 1px #00000029;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.register-box {
+    height: 2.5vh;
+    width: 25vw;
+    background-color: transparent;
+    border: 1px solid #707070;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    color: #464646;
+    opacity: 45%;
+}
+
+.register-field {
+    padding: 0.8vh;
+    margin: 0 -5px;
+}
+
+.welcome-field {
+    margin-bottom: 6vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.register-name-surname {
+    width: 21vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-name {
+    width: 15vw;
+    margin: 0.4vw;
+}
+
+.register-box-name {
+    height: 2.5vh;
+    width: 12vw;
+    border: 1px solid #707070;
+    color: #464646;
+    opacity: 45%;
+}
+
+.input {
+    width: 22vw;
+    border: transparent;
+    outline: 0;
+}
+
+.input-name {
+    width: 8vw;
+    border: transparent;
+    outline: 0;
+}
+
+i {
+    color: #464646;
+    opacity: 45%;
+    margin: 0 5px;
+}
+
+.sign-up {
+    background: #02B3FF 0% 0% no-repeat padding-box;
+    color: white;
+    font: inherit;
+    border: none;
+    width: 25vw;
+    height: 2.5vh;
+    margin-top: 0.8vh;
+    outline: 0;
+}
+
+
+
+
+
