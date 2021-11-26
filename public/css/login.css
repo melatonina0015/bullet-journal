@@ -1,0 +1,18 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    background:url('../img/bg.svg') no-repeat;
+    background-size: auto 100vh;
+    background-position: left bottom;
+}
+
+body {
+    margin: 0;
+}
