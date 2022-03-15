@@ -2,7 +2,7 @@
 
 require_once 'AppController.php';
 
-class gitDefaultController extends AppController{
+class DefaultController extends AppController{
 
     public function index()
     {

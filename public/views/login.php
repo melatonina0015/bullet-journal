@@ -21,12 +21,20 @@
             </div>
         </div>
         <div class="container">
-            <div class="login_box">
+            <form class="login" action="login" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)) {
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <p>Welcome back!</p>
-                <input name="email" placeholder="Enter your email">
-                <input name="password" placeholder="Enter your password">
-                <button>Log In</button>
-            </div>
+                <input name="email" type="text" placeholder="Enter your email">
+                <input name="password" type="password" placeholder="Enter your password">
+                <button type="submit">Log In</button>
+            </form>
         </div>
     </div>
 </body>
