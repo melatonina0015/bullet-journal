@@ -2,15 +2,20 @@
 
 require_once 'AppController.php';
 
-class DefaultController extends AppController{
+class gitDefaultController extends AppController{
 
-    public function index(){
-        //TODO display login.html
+    public function index()
+    {
         $this->render('login');
     }
 
-    public function main(){
-        //TODO display main.html
+    public function main()
+    {
         $this->render('main');
+    }
+
+    public function register()
+    {
+        $this->render('register');
     }
 }
