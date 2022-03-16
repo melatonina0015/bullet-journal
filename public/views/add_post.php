@@ -21,6 +21,25 @@
             </nav>
             <a class="cta "href="#"><button>Log out</button></a>
         </header>
+        <section class="post-form">
+            <h1>UPLOAD</h1>
+            <form action="addPost" method="POST" ENCTYPE="multipart/form-data">
+                <div class="messages">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
+                <input name="title" type="text" placeholder="title">
+                <textarea name="content" rows=15 placeholder="content"></textarea>
+
+                <input type="file" name="file"/><br/>
+                <button type="submit">send</button>
+            </form>
+        </section>
     </div>
 </body>
 </html>

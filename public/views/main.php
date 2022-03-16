@@ -21,6 +21,15 @@
             </nav>
             <a class="cta "href="#"><button>Log out</button></a>
         </header>
+        <section class="posts">
+            <div id="post_1">
+                <img src="public/uploads/<?php $post->getImage() ?>">
+                <div>
+                    <h2><?php $post->getTitle() ?></h2>
+                    <p><?php $post->getDescription() ?></p>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
