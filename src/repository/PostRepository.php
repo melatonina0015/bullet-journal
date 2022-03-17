@@ -10,7 +10,7 @@ class PostRepository extends Repository
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public."Posts" WHERE postID = :id
         ');
-        $stmt->bindParam(':postID', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
         $post = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -49,7 +49,7 @@ class PostRepository extends Repository
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM "Posts";
+            SELECT * FROM public."Posts";
         ');
         $stmt->execute();
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -63,5 +63,18 @@ class PostRepository extends Repository
         }
 
         return $result;
+    }
+
+    public function getPostByTitle(string $searchString)
+    {
+        $searchString = '%' . strtolower($searchString) . '%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM "Posts" WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+        ');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

@@ -10,4 +10,5 @@ Routing::get('main', 'PostController');
 Routing::get('register', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('addPost', 'PostController');
+Routing::post('search', 'PostController');
 Routing::run($path);
