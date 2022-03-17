@@ -23,10 +23,10 @@
         </header>
         <section class="posts">
             <div id="post_1">
-                <img src="public/uploads/<?php $post->getImage() ?>">
+                <img src="public/uploads/<?= $post->getImage() ?>">
                 <div>
-                    <h2><?php $post->getTitle() ?></h2>
-                    <p><?php $post->getDescription() ?></p>
+                    <h2><?= $post->getTitle() ?></h2>
+                    <p><?= $post->getContent() ?></p>
                 </div>
             </div>
         </section>

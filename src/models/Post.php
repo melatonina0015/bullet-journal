@@ -2,13 +2,13 @@
 
 class Post {
     private $title;
-    private $description;
+    private $content;
     private $image;
 
-    public function __construct($title, $description, $image)
+    public function __construct($title, $content, $image)
     {
         $this->title = $title;
-        $this->description = $description;
+        $this->content = $content;
         $this->image = $image;
     }
 
@@ -22,14 +22,14 @@ class Post {
         $this->title = $title;
     }
 
-    public function getDescription(): string
+    public function getContent(): string
     {
-        return $this->description;
+        return $this->content;
     }
 
-    public function setDescription(string $description)
+    public function setContent(string $content)
     {
-        $this->description = $description;
+        $this->content = $content;
     }
 
     public function getImage(): string

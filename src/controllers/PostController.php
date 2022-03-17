@@ -18,9 +18,9 @@ class PostController extends AppController
                 $_FILES['file']['tmp_name'],
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
-            $post = new Post($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $post = new Post($_POST['title'], $_POST['content'], $_FILES['file']['name']);
 
-            return $this->render('main', ['messages' => $this->message]);
+            return $this->render('main', ['messages' => $this->message, 'post' => $post]);
         }
         return $this->render('add_post', ['messages' => $this->message]);
     }
