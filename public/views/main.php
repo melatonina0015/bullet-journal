@@ -22,6 +22,8 @@
             <a class="cta "href="#"><button>Log out</button></a>
         </header>
         <section class="posts">
+            <?php var_dump($posts) ?>
+            <?php foreach ($posts as $post): ?>
             <div id="post_1">
                 <img src="public/uploads/<?= $post->getImage() ?>">
                 <div>
@@ -29,6 +31,7 @@
                     <p><?= $post->getContent() ?></p>
                 </div>
             </div>
+            <?php endforeach; ?>
         </section>
     </div>
 </body>

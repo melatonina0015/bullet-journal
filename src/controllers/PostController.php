@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Post.php';
+require_once __DIR__.'/../repository/PostRepository.php';
 
 class PostController extends AppController
 {
@@ -10,6 +11,19 @@ class PostController extends AppController
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $message = [];
+    private $postRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->postRepository = new PostRepository();
+    }
+
+    public function main()
+    {
+        $posts = $this->postRepository->getPosts();
+        $this->render('main', ['posts' => $posts]);
+    }
 
     public function addPost()
     {
@@ -18,7 +32,9 @@ class PostController extends AppController
                 $_FILES['file']['tmp_name'],
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
+
             $post = new Post($_POST['title'], $_POST['content'], $_FILES['file']['name']);
+            $this->postRepository->addPost($post);
 
             return $this->render('main', ['messages' => $this->message, 'post' => $post]);
         }
