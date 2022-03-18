@@ -24,6 +24,9 @@ if(!isset($_SESSION["useremail"])){
                 <input type="search" placeholder="search post">
             </div>
             <nav>
+                <div class="add_post" role="button" onclick="location.href='add_post'">
+                    <p>Add Post</p>
+                </div>
             </nav>
             <a class="cta" href="#"><button class="logout">Log out</button></a>
         </header>

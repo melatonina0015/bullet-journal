@@ -13,4 +13,9 @@ class DefaultController extends AppController{
     {
         $this->render('register');
     }
+
+    public function add_post()
+    {
+        $this->render('add_post');
+    }
 }
