@@ -70,7 +70,7 @@ class PostRepository extends Repository
         $searchString = '%' . strtolower($searchString) . '%';
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM "Posts" WHERE LOWER(title) LIKE :search OR LOWER(description) LIKE :search
+            SELECT * FROM "Posts" WHERE LOWER(title) LIKE :search OR LOWER(content) LIKE :search
         ');
         $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
         $stmt->execute();

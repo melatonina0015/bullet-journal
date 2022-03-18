@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION["useremail"])){
+    header("location: ../login");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="public/css/main.css">
+    <script type="text/javascript" defer src="/public/js/logout.js"></script>
     <title>Bullet</title>
 </head>
 <body>
@@ -12,14 +20,8 @@
         <header class="header">
             <img class="logo" src="public/img/logo.svg" alt="logo">
             <nav>
-                <ul class="nav_links">
-                    <li><a href="#">Tiles</a></li>
-                    <li><a href="#">Options</a></li>
-                    <li><a href="#">Info</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
             </nav>
-            <a class="cta "href="#"><button>Log out</button></a>
+            <a class="cta "href="#"><button class="logout">Log out</button></a>
         </header>
         <section class="post-form">
             <h1>UPLOAD</h1>

@@ -39,8 +39,8 @@ function createPost(post) {
     image.src = `/public/uploads/${post.image}`;
     const title = clone.querySelector("h2");
     title.innerHTML = post.title;
-    const description = clone.querySelector("p");
-    description.innerHTML = post.description;
+    const content = clone.querySelector("p");
+    content.innerHTML = post.content;
 
     projectContainer.appendChild(clone);
 }
